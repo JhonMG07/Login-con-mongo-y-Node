@@ -1,0 +1,32 @@
+<div class="row">
+    {{#each notes}}
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between align-item-center">
+                    {{titulo}}
+                    <a href="/notes/edit/{{_id}}">
+                        <i class="fa fa-pencil">
+                        </i>
+                    </a>
+                </h4>
+                <p>
+                    {{description}}
+                </p>
+                <!--Vamos a usar la extencion de override para 
+                poder usar le metodo delete (se configura en el servidor)-->
+
+                <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-block btn-sm">
+                        Eliminar
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    {{/each}}
+</div>
