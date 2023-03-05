@@ -1,3 +1,15 @@
-body{
-    background-color: #1488cc;
+body {
+  background-color: #1488cc;
+}
+.perfilphoto {
+  position: relative;;
+  top: 50%;
+  left: 30%;
+  
+  max-width: 30%;
+  max-height:30%;
+
+min-width: 100px;
+min-height: 100px;
+  border: 2px solid black;
 }

@@ -8,4 +8,8 @@ indexCtrl.renderAbout = (req, res) => {
   res.render("about");
 };
 
+indexCtrl.renderFeatures=(req,res)=>{
+  res.render("features");
+}
+
 module.exports = indexCtrl;
